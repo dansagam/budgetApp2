@@ -1,0 +1,221 @@
+/****************************************
+Trying to replicated a design
+
+***************/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #555;
+    font-family: Open Sans;
+    font-size: 16px;
+    position: relative;
+    height: 100vh;
+    font-weight: 400;
+    width: 100%;
+}
+
+.top-header {
+    width: 100%;
+    height: 40vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../image/budget-training.jpg);
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.flex_topper{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-end;
+    color: #fff;
+    width: 400px;
+}
+.topper, h2.heading-text{
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+.budget-expense-display{
+    font-weight: 300;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    
+}
+.budget-input-stack-display,.expense-input-stack-display{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px;
+    text-transform: uppercase;
+    text-align: left;
+
+}.expense_spent_value,.budget-income-value{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-transform: uppercase;
+
+}
+.expense_value, .budget_income-value{
+    text-align: left;
+
+}
+
+.budget-input-stack-display{
+    margin-bottom: 5px;
+    background-color: #28B9B5;
+}
+.expense-input-stack-display{
+    background-color: #FF5049;
+    margin-bottom: 10px;
+}
+.budget_income-percentage, .expense_spent_percentage{
+    width: 34px;
+    font-size: 11px;
+    padding: 3px 0;
+    margin-left: 10px;
+
+}
+.expense_spent_percentage{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* the body of the budget displa
+
+*/
+
+.budget_body{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div.input_field{
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #f7f7f7;padding: 15px;
+}
+.input_container{
+    /* padding: 15px; */
+    margin: 0 auto;
+    text-align: center;
+}
+#budget_expense_logic,  .expense_budget_name_input, 
+.expense_budget_value_input {
+    padding: 10px;
+    font-family: inherit;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+}
+#budget_expense_logic{
+    background-color: #fff;
+    border: 1px solid #e7e7e7;
+}
+.expense_budget_name_input{
+    width: 400px;
+    border-radius: 5px;
+    border: 1px solid #e7e7e7;
+}
+.expense_budget_value_input{
+    width: 90px;
+    border: 1px solid #e7e7e7;
+    margin: 0 7px;
+}
+.input_submit{
+    padding: 10px;
+    border: none;
+    font-size: 1.8em;
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+    transition: border 0.3s;
+}
+.input_submit:focus{
+    outline: none;
+    cursor: pointer;
+}
+
+
+/* budget disaply detail  */
+
+.display-centre-container{
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.budget-text-display, .expense-text-display{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+.budget__list_display .items_fields, .expense__list_display .items_fields{
+    margin-top: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.items_fields:nth-of-type(2n){
+    background-color: rgba(221, 207, 207, 0.993);
+}
+h2.budget__header, h2.expense__header{
+    font-weight: 100;
+    font-size: 1.5em;
+    border-bottom: 1px solid #e7e7e7 ;
+    padding: 10px;
+    margin-bottom: 7px;
+}
+.items_details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.items_details .item_percentage{
+    /* padding: 7px; */
+    height: 20px;
+    background-color: rgb(252, 158, 155);
+    filter: invert(0.2);
+    margin: 0 5px;
+}
+.item_value{
+    color: #28B9B5;
+}
+.delete_items_icon button {
+    color: #706f6f;
+    font-size: 1.5rem;
+    margin-left: 20px;
+    background-color: #fff;
+    height: 20px;
+    text-align: center;
+    border: none;
+    width: 0;
+    opacity: 0;
+    display: inline-block;
+    visibility: visible;
+    transition: 0.2s linear;
+    transition-property: transform opacity;
+
+}
+.items_fields:hover .delete_items_icon button{
+    width: 20px;
+    opacity: 1;
+}
